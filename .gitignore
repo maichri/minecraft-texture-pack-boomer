@@ -1,0 +1,12 @@
+# Build-Output
+dist/
+*.zip
+
+# macOS
+.DS_Store
+
+# Editoren / Grafikprogramme
+.vscode/
+.idea/
+*.kra~
+*.psd~
