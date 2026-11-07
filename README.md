@@ -1,6 +1,11 @@
 # Boomer Pack
 
-Ressourcenpaket für unseren gemeinsamen Minecraft-Server (Java Edition 26.2, Pack-Format 88).
+Ressourcenpaket für unseren gemeinsamen Minecraft-Server (Java Edition 26.3, Pack-Format 97).
+
+## Inhalt
+
+- **Cowboyhut**: Ein geschnitzter Kürbis, der im Amboss „Cowboyhut“, „cowboyhut“, „Cowboy Hut“, „Cowboyhat“ oder „Cowboy Hat“ heißt,
+  wird als Cowboyhut angezeigt (in der Hand und auf dem Kopf). Das Kürbis-Overlay beim Tragen ist ausgeblendet.
 
 ## Struktur
 

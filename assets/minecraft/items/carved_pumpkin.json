@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": [
+          "Cowboyhut",
+          "cowboyhut",
+          "Cowboy Hut",
+          "Cowboyhat",
+          "Cowboy Hat"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "christoph:item/cowboyhut"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/carved_pumpkin"
+    }
+  }
+}
