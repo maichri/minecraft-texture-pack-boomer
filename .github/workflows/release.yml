@@ -1,0 +1,32 @@
+# Baut bei jedem Tag v* das Paket und veröffentlicht es als GitHub Release.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Paket bauen
+        id: build
+        run: |
+          ./scripts/build.sh
+          echo "sha1=$(sha1sum dist/boomer-pack.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/boomer-pack.zip
+          body: |
+            Für `server.properties`:
+
+            ```properties
+            resource-pack=https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/boomer-pack.zip
+            resource-pack-sha1=${{ steps.build.outputs.sha1 }}
+            ```

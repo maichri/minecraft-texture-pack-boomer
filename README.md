@@ -34,19 +34,25 @@ ln -s "$PWD" ~/Library/Application\ Support/minecraft/resourcepacks/boomer-pack
 
 Im Spiel lädt `F3` + `T` die Ressourcen neu.
 
-## Für den Server bauen
+## Neue Version veröffentlichen
 
 ```sh
-./scripts/build.sh
+git tag v1.0.0
+git push origin v1.0.0
 ```
 
-Erzeugt `dist/boomer-pack.zip` und gibt den SHA-1 aus. Das ZIP muss unter einer direkten Download-URL liegen, dann in `server.properties`:
+GitHub Actions baut daraufhin das ZIP und legt ein [Release](https://github.com/maichri/minecraft-texture-pack-boomer/releases) an.
+In der Release-Beschreibung stehen URL und SHA-1 fertig zum Kopieren für `server.properties`:
 
 ```properties
-resource-pack=https://example.com/boomer-pack.zip
-resource-pack-sha1=<SHA-1 aus dem Build>
+resource-pack=https://github.com/maichri/minecraft-texture-pack-boomer/releases/download/v1.0.0/boomer-pack.zip
+resource-pack-sha1=<SHA-1 aus dem Release>
 require-resource-pack=false
 ```
+
+URL und Hash gehören immer zusammen. Nach jedem neuen Release beides aktualisieren und den Server neu starten.
+
+Lokal bauen (z. B. zum Testen des ZIPs): `./scripts/build.sh` erzeugt `dist/boomer-pack.zip` und gibt den SHA-1 aus.
 
 ## Neue Minecraft-Version
 
