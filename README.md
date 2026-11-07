@@ -6,6 +6,9 @@ Ressourcenpaket für unseren gemeinsamen Minecraft-Server (Java Edition 26.3, Pa
 
 - **Cowboyhut**: Ein geschnitzter Kürbis, der im Amboss „Cowboyhut“, „cowboyhut“, „Cowboy Hut“, „Cowboyhat“ oder „Cowboy Hat“ heißt,
   wird als Cowboyhut angezeigt (in der Hand und auf dem Kopf). Das Kürbis-Overlay beim Tragen ist ausgeblendet.
+- **Gemälde**: Die Vanilla-Gemälde *Fighters* und *Changing* (beide 4×2 Blöcke) zeigen Screenshots vom Server
+  (Endportal und Turm, 2026-11-02). Gezielt platzieren:
+  `/give @s painting[painting/variant="minecraft:fighters"]` bzw. `"minecraft:changing"`.
 
 ## Struktur
 
