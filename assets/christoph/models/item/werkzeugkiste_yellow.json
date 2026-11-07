@@ -1,0 +1,6 @@
+{
+  "parent": "christoph:item/werkzeugkiste",
+  "textures": {
+    "body": "christoph:item/werkzeugkiste_body_yellow"
+  }
+}
